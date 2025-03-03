@@ -3,7 +3,7 @@ $(document).ready(function(){
         items: 1,            // Display 1 item at a time
         loop: true,          // Loop through the slides
         margin: 10,          // Space between slides
-        autoplay: false,      // Enable autoplay
+        autoplay: true,      // Enable autoplay
         autoplayTimeout: 3000, // Time between slides in milliseconds
         autoplayHoverPause: true, // Pause autoplay on hover
         dots: true,          // Show navigation dots

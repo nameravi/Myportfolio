@@ -169,7 +169,7 @@ a[href^="tel:"] {
 .section-title{
     font-size: 89px;
     line-height: 100px;
-    font-weight: 600;
+    font-weight: 800;
 }
 .section-title .head1{
     font-size: 81px;
@@ -203,19 +203,46 @@ a[href^="tel:"] {
     padding:10px 0px 30px 0px;
     font-weight: 100;
 }
-.section-btn a{
-    font-size: 32px;
-    line-height: 35px;
-    padding: 10px 16px;
-    background: #6D6D6D;
-    color: #fff;
-    font-weight: 100;
-    width: 240px;
+
+.section-btn a, .award-info-sec a{
+    background: #fff;
+    color: #6D6D6D;
+    border: 1px solid #6D6D6D;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: color 400ms;
+    padding: 10px 20px;
 }
+
+.section-btn a::before,.award-info-sec a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #6D6D6D;
+    z-index: -1;
+    transition: transform 400ms ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.section-btn a:hover::before, .award-info-sec a:hover::before {
+   transform: scaleX(1);
+}
+
+.section-btn a:hover, .award-info-sec a:hover {
+    color: #fff;
+    background-color: #616161;
+    
+}
+
 .wht-sec-btn {
     position: relative;
 }
-.wht-sec-btn a{
+/* .wht-sec-btn a{
     position: absolute;
     top: 30px;
     right: 5px;
@@ -225,8 +252,44 @@ a[href^="tel:"] {
     background: #fff;
     color: #6D6D6D;
     font-weight: 100;
-    width: 240px;
+} */
+.wht-sec-btn a {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    z-index: 1;
+    transition: color 400ms;
+    width: 190px;
+    padding: 10px 15px;
+    text-align: center;
 }
+
+.wht-sec-btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: -1;
+    transition: transform 400ms ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.wht-sec-btn a:hover::before {
+   transform: scaleX(1);
+}
+
+.wht-sec-btn a:hover {
+    color: #6D6D6D;
+}
+
 .hero-content{
     padding: 160px 0px 130px 0px;
 }
@@ -249,11 +312,20 @@ a[href^="tel:"] {
 }
 .about-section .award-info .award-content p{
     font-size: 18px;
-    line-height: 28px;
+    line-height: 30px;
     font-weight: 300;
 }
 .pb-30{
     padding-bottom: 30px;
+}
+.pb-15{
+    padding-bottom: 15px;
+}
+.pt-15{
+    padding-top: 15px;
+}
+.pb-10{
+    padding-bottom: 10px;
 }
 .pos-rel{
     position: relative;
@@ -265,15 +337,15 @@ a[href^="tel:"] {
     font-size: 55px;
     line-height: 60px;
     padding: 35px 0px 10px 0px;
-    font-weight: 600;
+    font-weight: 800;
 }
 .about-wrap .about-box h4 span{
     font-weight: 200;
 }
 .about-wrap .about-box p{
-    font-size: 24px;
-    line-height: 40px;
-    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 10px;
 }
 .about-wrap .about-box h6{
     font-size: 36px;
@@ -416,25 +488,19 @@ line-height: 28px;
     font-size: 51px;
     line-height: 42px;
     color: #616161;
-    font-weight: 600;
+    font-weight: 800;
 }
 .awd-heading{
     padding-bottom: 15px;
 }
 .award-info-sec p{
-    font-size: 25px;
-    line-height: 34px;
-    padding: 0px 100px 38px 0px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0px 80px 38px 0px;
     font-weight: 300;
 }
-.award-info-sec a{
-    font-size: 32px;
-    line-height: 40px;
-    padding: 10px 50px 10px 15px;
-    color: #FFFFFF;
-    background: #616161;
-    font-weight: 100;
-    margin-bottom: 80px;
+.pb-80{
+    padding-bottom: 80px;
 }
 .br-line{
     border-bottom: solid 1px #707070;
