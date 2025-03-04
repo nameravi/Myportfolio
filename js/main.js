@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
 });
 document.addEventListener("DOMContentLoaded", function() {
-    const currentUrl = window.location.href;
+    const currentUrl = window.location.pathname;  // Use pathname instead of full URL for accurate matching
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Remove 'active' class from all nav links
@@ -21,9 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add 'active' class to the current page's link
     navLinks.forEach(link => {
-        if (link.href === currentUrl) {
+        // Skip the 'contact' link which uses a fragment identifier
+        if (link.pathname === currentUrl && !link.hash) {
+            link.classList.add('active');
+        } else if (currentUrl === '/' && link.pathname === '/index.html') {
             link.classList.add('active');
         }
     });
 });
+
+
 
