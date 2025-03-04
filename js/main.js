@@ -10,14 +10,13 @@ $(document).ready(function(){
        // nav: true,           // Show next/previous navigation arrows
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const currentUrl = window.location.href;
+    const navLinks = document.querySelectorAll('.nav-link');
 
-// Smooth scrolling using JavaScript (for older browsers or custom behavior)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+    navLinks.forEach(link => {
+        if (link.href === currentUrl) {
+            link.classList.add('active');
+        }
     });
 });
