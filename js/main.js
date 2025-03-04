@@ -14,9 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentUrl = window.location.href;
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Add 'active' class to the link that matches the current URL
     navLinks.forEach(link => {
         if (link.href === currentUrl) {
             link.classList.add('active');
         }
     });
+
+    // Ensure the home page is active if no match is found (use the home URL or path)
+    const homeLink = document.querySelector('.nav-link[href="/"]'); // Adjust the href based on your home page URL
+    if (!Array.from(navLinks).some(link => link.href === currentUrl) && homeLink) {
+        homeLink.classList.add('active');
+    }
 });
+
