@@ -240,6 +240,9 @@ a[href^="tel:"] {
 .section-btn a:hover, .award-info-sec a:hover {
     color: #fff;
 }
+.opacity-8{
+    opacity: 0.8;
+}
 
 .wht-sec-btn {
     position: relative;
