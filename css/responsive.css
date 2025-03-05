@@ -37,4 +37,15 @@
 .footer-left{
     float: none;
 }
+.icon-box br{
+    display: none;
+}
+.about-wrap .about-box h4{
+    font-size: 40px;
+    line-height: 35px;
+}
+.about-wrap .about-box h6{
+    font-size: 25px;
+    line-height: 30px;
+}
     }
