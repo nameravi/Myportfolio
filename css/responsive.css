@@ -5,19 +5,25 @@
 @media only screen and (max-width: 480px) {
     .section-title, .section-title .head3, .section-title .head1{
         font-size: 40px;
-    line-height: 60px;
+    line-height: 40px;
 }
 .portfolio-section .section-title {
     font-size: 40px;
-    line-height: 60px;
+    line-height: 40px;
 }
 .awd-heading h3{
     font-size: 40px;
     line-height: 40px;
 }
+.wht-sec-btn{
+    text-align: center;
+    margin-top: 20px;
+}
 .wht-sec-btn a{
     position: relative;
     margin-left: 15px;
+    top: 0px!important;
+    right: 0px!important;
 }
 .portfolio-section .section-title .head3, .section-title .head3, .section-title .head1{
     top: 0px;
@@ -47,5 +53,24 @@
 .about-wrap .about-box h6{
     font-size: 25px;
     line-height: 30px;
+}
+.navbar{
+    padding: 10px 0px;
+}
+.navbar img{
+    width: 50px;
+    height: auto;
+}
+.mobile-banner{
+    display: block!important;
+}
+.hero-content{
+    padding: 20px 0px 50px 0px;
+}
+.owl-item .item{
+    background-image: none!important;
+}
+.navbar img{
+    display: block;
 }
     }

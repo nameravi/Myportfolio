@@ -149,6 +149,9 @@ a[href^="tel:"] {
 .navbar{
     padding: 0px;
 }
+.navbar img{
+    display: none;
+}
 .main-menu{
     position: relative;
 }
@@ -260,8 +263,8 @@ a[href^="tel:"] {
 } */
 .wht-sec-btn a {
     position: absolute;
-    top: 30px;
-    right: 5px;
+    top: -50px;
+    right: -10px;
     background: transparent;
     color: #fff;
     border: 1px solid #fff;
@@ -455,6 +458,18 @@ line-height: 28px;
 .portfolio-section .modal-body p span{
     font-weight: 500;
 }
+.nav-pills .nav-link, .nav-pills .nav-link:hover, .nav-pills .nav-link:active{
+font-size: 18px;
+line-height: 30px;
+color: #fff;
+padding: 10px 20px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 0px;
+}
 
 /* Owl Carousel */
 .owl-theme .owl-dots .owl-dot span{
@@ -490,7 +505,9 @@ line-height: 28px;
     opacity: 1;
     border:solid 1px #bcbcbc;
 }
-
+.mobile-banner{
+    display: none!important;
+}
 /* Award Section */
 .award-section{
     padding: 60px 0px 30px 0px;
