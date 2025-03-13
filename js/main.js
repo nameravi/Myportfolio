@@ -3,7 +3,7 @@ $(document).ready(function(){
         items: 1,            // Display 1 item at a time
         loop: true,          // Loop through the slides
         margin: 10,          // Space between slides
-        autoplay: true,      // Enable autoplay
+        autoplay: false,      // Enable autoplay
         autoplayTimeout: 3000, // Time between slides in milliseconds
         autoplayHoverPause: true, // Pause autoplay on hover
         dots: true,          // Show navigation dots
@@ -28,6 +28,14 @@ document.addEventListener("DOMContentLoaded", function() {
             link.classList.add('active');
         }
     });
+});
+window.addEventListener('DOMContentLoaded', function () {
+    var firstTab = document.querySelector('#portfolio-tabs .nav-link');
+    var firstTabContent = document.querySelector('.tab-content .tab-pane');
+
+    // Add 'active' class to the first tab and tab content
+    firstTab.classList.add('active');
+    firstTabContent.classList.add('active', 'show');
 });
 
 
