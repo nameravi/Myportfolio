@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css//swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -59,851 +61,1173 @@
     <!--End Header Section-->
     <!-- Portfolio section-->
     <section class="portfolio-section bg-white" id="data-container">
-        <div class="container ">
-            <h1 class="section-title text-center pb-15"><span class="head3">PORT</span>FOLIO</h1>
-            <div class="row card-container">
+        <div class="container">
+            <h1 class="section-title text-center pb-30" data-aos="zoom-in-up"><span class="head3">PORT</span>FOLIO</h1>
+    
+            <!-- Bootstrap Pills Navigation -->
+            <ul class="nav nav-pills justify-content-center mb-4" id="portfolio-tabs" role="tablist">
+                <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link active" id="all-tab" data-toggle="pill" href="#all" role="tab">All</a>
+                </li>
+                
+                <li class="nav-item" data-aos="fade-left" data-aos-offset="200">
+                    <a class="nav-link" id="videos-tab" data-toggle="pill" href="#videos" role="tab">Videos</a>
+                </li>
+                <li class="nav-item" data-aos="fade-left" data-aos-offset="300">
+                    <a class="nav-link" id="brand-tab" data-toggle="pill" href="#brand" role="tab">Brand</a>
+                </li>
+            </ul>
+    
+            <!-- Portfolio Tab Content -->
+            <div class="tab-content" id="portfolio-content">
+                
+                <!-- All Projects (Default Active Tab) -->
+                <div class="tab-pane fade show active" id="all" role="tabpanel">
+                    <div class="row card-container">
+                        <div class="col-md-12">
+                            <div class="row" id="port-img">
+                                <div class="col-md-4 item-info pad-rgt-top" data-aos="fade-zoom-in">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal1">
+                                        <img src="images/aciphex.jpg" alt="Portfolio 1" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal1" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/aciphex.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top" data-aos="fade-zoom-in"
+                                data-aos-offset="200">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal2">
+                                        <img src="images/volt.jpg" alt="Portfolio 2" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal2" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/volt.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top" data-aos="fade-zoom-in"
+                                data-aos-offset="300">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal3">
+                                        <img src="images/cipla.jpg" alt="Portfolio 3" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal3" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/cipla.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 item-info pad-rgt-top" data-aos="fade-zoom-in">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal4">
+                                        <img src="images/comfort.jpg" alt="Portfolio 4" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal4" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Comfort</p>
+                                                    <p><span>Client</span> Unilever , UK</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>Create a package design or still advert for Comfort's new liquid
+                                                        Fabric
+                                                        Conditioner that communicates 'freshness' and 'naturalness' in a way
+                                                        that's
+                                                        irresistible and distinct from existing fabric conditioners.</p>
+                                                </div>
+                                                <img src="images/comfort.jpg" alt="shower" class="img-fluid">
+                                                <p class="pt-15 pb-10"><span>Idea description</span></p>
+                                                <p class="pb-15">The idea is to blend the clothes and nature seamlessly.
+                                                    This is shown
+                                                    by a series ofimages which could be used to different variants of the
+                                                    products. We
+                                                    show three images of nature - Snowclad Mountain, Lush Green landscape,
+                                                    Sunny
+                                                    Dessert. While on first look it looks like an image of nature, but on
+                                                    closer, it
+                                                    becomes visible that the snow-clad mountain is not a mountain but a
+                                                    white cloth
+                                                    folded in the shape of a mountain. Similarly, in the green landscape,
+                                                    the green
+                                                    grass is actually a green towel, and the dessert sand dunes are nothing
+                                                    but a brown
+                                                    jacket.</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p>The visual shows how the clothes blend into nature just like what
+                                                            our product
+                                                            offers. The Tagline, “Blending the freshness of nature'
+                                                            reiterates the
+                                                            visual - blending the clothes with the nature freshness. The
+                                                            word blend also
+                                                            has another connotation. The comfort conditioner is BLENDED
+                                                            (mixed) with the
+                                                            washing powder to get the freshness of nature. The circle
+                                                            illustrated around
+                                                            the copy is an signifies the blending process of mixing of the
+                                                            conditioner
+                                                            with the clothes in the washing machine or bucket, incidentally
+                                                            both has
+                                                            circle circumference.</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img src="images/comfort01.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 item-info pad-rgt-top" data-aos="fade-zoom-in">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal5">
+                                        <img src="images/atom.jpg" alt="Portfolio 5" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal5" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> XS<sup>&trade;</sup> brand of energy and sports
+                                                        nutrition
+                                                        products</p>
+                                                    <p><span>Client</span> Amway USA</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>Objective The future of healthier energy drink. Help XS build this
+                                                        sub-brand of
+                                                        clean energy drinks from the ground up without taking away from the
+                                                        existing
+                                                        line of XS Energy Drinks, including naming, messaging, positioning,
+                                                        and branding
+                                                        elements.</p>
+                                                </div>
+                                                <img src="images/aotm01.jpg" alt="atom" class="img-fluid">
+                                                <p class="pt-30 pb-10"><span>Idea description</span></p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+    
+                                                        <p class="pb-15">ATOM - As we all know all the matters on our planet
+                                                            is made up
+                                                            of atoms, including the human body, The drink is produced
+                                                            organically, which
+                                                            means it is very conscious of our environment. It takes more and
+                                                            gives back
+                                                            more to the environment by using sustainable farming practice.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img src="images/atom.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                                <p class="pb-15"> There is a common thread between the product and the
+                                                    environment, like how there is a common thread
+                                                    between the human and its environment.</p>
+                                                <p class="pb-15">And the common thread is the Atom. We all are made up of
+                                                    atoms
+                                                    on different level.
+                                                    And the drink can is like atom, if opened, unleashes powerful energy to
+                                                    the
+                                                    consumer.</p>
+                                                <p><span>Atom - It is more Physical.</span></p>
+                                                <p>There are two connotations for this line. The first on is
+                                                    related to the ATOM part, where word signifies, the physical world, our
+                                                    surrounding
+                                                    and environment. The drink is produced organically; hence it says that
+                                                    the product
+                                                    has to do more with environment than with artificial flavour and
+                                                    ingredients etc.
+                                                    And, in the second, the word physical denotes the body and how the
+                                                    drinks helps them
+                                                    to do more physical work by giving them more energy.</p>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 item-info pad-rgt-top" data-aos="fade-zoom-in">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal6">
+                                        <img src="images/gerber.jpg" alt="Portfolio 6" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal6" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/gerber.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal7">
+                                        <img src="images/wyeth.jpg" alt="Portfolio 7" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal7" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/wyeth.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal8">
+                                        <img src="images/ge.jpg" alt="Portfolio 8" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal8" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/ge.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal9">
+                                        <img src="images/raldesy.jpg" alt="Portfolio 9" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal9" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/raldesy.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal10">
+                                        <img src="images/dysport.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal10" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="images/dysport.jpg" alt="Portfolio 1" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal11">
+                                        <img src="images/anti-virus.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal11" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> AXA</p>
+                                                    <p><span>Client</span> AXA BELGIUM NV, Brussels</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>To craft a compelling advertising campaign that highlights how the
+                                                        insurance company values and rewards customer loyalty in innovative
+                                                        and
+                                                        meaningful ways, strengthening long-term relationships and trust.
+                                                    </p>
+                                                </div>
+                                                <img src="images/anti-virus.jpg" alt="Idea" class="img-fluid">
+    
+                                                <p class="pt-15 pb-10"><span>Idea description</span></p>
+                                                <p class="pb-15">In today's world, digital security & protection is very
+                                                    important as
+                                                    lot of classified information are stored in the personal devices like
+                                                    mobile laptops
+                                                    desktops etc., Now, AXA, as a part of its reward program, offers its
+                                                    customers
+                                                    digital protection by providing an anti-virus software subscription
+                                                    valid for one
+                                                    year for one of their digital devices. The subscription gets renewed
+                                                    every year
+                                                    depending on the term of the insurance contract. So, if the contract is
+                                                    for 5 years,
+                                                    then the subscription is valid for five years; but would be renewed
+                                                    every year. And
+                                                    for customer who have more than 6 contracts, the annual subscription
+                                                    would be for
+                                                    multiple devices. This reward program essentially underlines the fact
+                                                    that AXA as an
+                                                    insurance company ensure the protection of its customer digital part as
+                                                    well.</p>
+    
+                                                <p><span>how your fidelity reward/ feature(s) could improve clients'
+                                                        satisfaction?</span></p>
+                                                <p class="pb-15">Digital devices are an integral part of our life. everyone
+                                                    is on it
+                                                    for lot many purposes like social media, banking etc. where there is a
+                                                    high risk of
+                                                    information theft. In such a scenario, digital security is more than
+                                                    important now.
+                                                    And most people, though are aware of the impending risk, don't usually
+                                                    take concrete
+                                                    measure to make it secure. So, this reward defending an individual and
+                                                    his entire
+                                                    family against virus, malware, random ware etc., would be a perfect
+                                                    compliment as it
+                                                    gives them peace of mind in both virtual & real life.</p>
+                                                <p><span>How it works? </span></p>
+                                                <p class="pb-15">AXA has to reach
+                                                    out to either one of the major players in antivirus software like
+                                                    Kaspersky, Norton,
+                                                    ESET or McAfee or any other credible antivirus software company. An
+                                                    agreement has to
+                                                    be made where AXA brings in a certain amount of customer from its domain
+                                                    while the
+                                                    software company would provide the annual subscription at a nominal
+                                                    value which
+                                                    would benefit both the companies, in terms of increasing the customer
+                                                    base as well
+                                                    the revenue part.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal12">
+                                        <img src="images/idea-descriptions.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal12" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Driverless cars</p>
+                                                    <p><span>Client</span> IPSOS France</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>To showcase how driverless cars can transform public transportation,
+                                                        making it safer, more efficient, and accessible for everyone, while
+                                                        building
+                                                        trust in autonomous technology</p>
+                                                </div>
+                                                <img src="images/idea-descriptions.jpg" alt="Idea" class="img-fluid">
+    
+                                                <p class="pt-15 pb-10"><span>Idea description</span></p>
+                                                <p class="pb-15">The idea is to create different types of groups/communities
+                                                    for
+                                                    driverless cars.
+                                                    These communities consists of an array of different groups like, Go
+                                                    green - for
+                                                    environmental enthusiasts, Nirvana - for Yoga fans, The Godfather - for
+                                                    movie buffs,
+                                                    Jimmy - for Jim Morrison fans etc., </p>
+                                                <p class="pb-15">An individual can sign up for a particular
+                                                    group(s) depending on his interests and get to meet people with similar
+                                                    interests.
+                                                    By signing up he/she would be entitled to some privileges and access to
+                                                    exclusive
+                                                    areas in regard with the community like free pass to some conference,
+                                                    concerts
+                                                    movies etc., The individual can also introduce new members by which he
+                                                    would gain
+                                                    few points which can be utilised for free drive or something. These
+                                                    communities can
+                                                    be city specifics and while leaving the city, the points gained by an
+                                                    individual can
+                                                    be transferred to someone else or can be utilised by joining the same
+                                                    community in
+                                                    other cities. </p>
+                                                <p class="pb-15">So, basically the intention these communities is to create
+                                                    connection and bond between people who are otherwise in their own
+                                                    cocoon. There
+                                                    should be regulatory to oversee that the communities are NOT created to
+                                                    wedge the
+                                                    cohesiveness fabric of society.</p>
+                                                <p><span>How does this service change the lifestyle of the
+                                                        user and their relationship to transport and travel?</span></p>
+                                                <p class="pb-15"> The journey becomes more
+                                                    interesting than the destination. The travel time becomes interesting as
+                                                    it becomes
+                                                    an arena to meet likeminded people.</p>
+                                                <p><span>How is this service exclusive to the driverless
+                                                        vehicle?</span></p>
+                                                <p class="pb-15">The only way to meet likeminded people with similar
+                                                    interest while
+                                                    travelling is only through signing up and using driverless vehicles.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal13">
+                                        <img src="images/rehydrate.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal13" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Spadel</p>
+                                                    <p><span>Client</span> SV Spadel NV, Belgium</p>
+                                                </div>
+                                                <img src="images/rehydrate.jpg" alt="Portfolio 1" class="img-fluid">
+                                                <p class="pt-15 pb-10"><span>Idea description</span></p>
+                                                <p class="pb-15">The idea is to provide the consumer a single bottle which
+                                                    could be
+                                                    refilled anywhere
+                                                    according to their convenience based on subscription. So, the consumer
+                                                    buys a
+                                                    bottled natural water to drink, once he consumes the waters, proceeds to
+                                                    scans the
+                                                    code embedded sticker at the bottom of the bottle with his mobile phone,
+                                                    downloads
+                                                    the app to registers and subscribe to a certain number of liters which
+                                                    needs to be
+                                                    consumed within a certain timeframe. (For example: 50 liters for one
+                                                    month time).
+                                                    And next time when he feels like drinking water, he could just go to the
+                                                    nearest
+                                                    Refiller tap to fill his empty old bottle. The Refiller tap is installed
+                                                    in every
+                                                    nook and corner of the city and this tap spot could be located with the
+                                                    help of the
+                                                    downloaded App. The consumer could refill how much ever liters he/she
+                                                    has subscribed
+                                                    for. First time, the consumer buys the bottle filled with natural water,
+                                                    once he
+                                                    drinks the water, he can fold the bottle flat vertically and keep it in
+                                                    the bag. The
+                                                    collapsible / accordion fold design of the bottle makes this possible.
+                                                    And next time
+                                                    when he wants to drink the water, he opens the Refill App, locates the
+                                                    nearest
+                                                    Refilling tap, pulls out the folded bottle from his bag, takes it close
+                                                    by the
+                                                    machine, the machine has a sensor which detects the bottle and the slot
+                                                    opens
+                                                    automatically. There is a hollow space with a tap on the top and a
+                                                    magnetic plate at
+                                                    the bottom. The bottle needs to be kept in a folded format only. The
+                                                    code at the
+                                                    bottom of the bottle sits perfectly on the magnetic plate and helps the
+                                                    machine to
+                                                    read the code and its corresponding details of the consumer, his
+                                                    subscription plan
+                                                    etc., and based on this, the machine automatically pulls up the bottle
+                                                    and fills
+                                                    water based on the size of the bottle. Here it needs to be noted, the
+                                                    consumer
+                                                    doesn't have the choice to decide on the quantity, for example, he
+                                                    cannot fill half.
+                                                    Here the filling is automated, once the bottle goes in, the machine
+                                                    pulls out and
+                                                    read the size and fills in accordingly. The filling hardly takes a
+                                                    minute to fill
+                                                    and the message appears on the black door. After few seconds, the door
+                                                    opens, the
+                                                    bottle is filled with fresh water. The consumer could do this repeatedly
+                                                    until the
+                                                    subscription exhausts. This subscription cost would be very less when
+                                                    comparing
+                                                    buying individual bottle every now and then. </p>
+                                                <p class="pb-15">what is it, how does it work, in home,
+                                                    out of home, what does the service look like, how does the
+                                                    water/packaging go from
+                                                    the provider to the end user (and back), This idea is primarily for
+                                                    outdoors, for
+                                                    people who are on the go. They don't have to carry the bottle of water
+                                                    from home,
+                                                    instead fill it as and when it is required. From the business execution
+                                                    side, FIVE
+                                                    main players would be integral part of it. 1) BOTTLE MANUFACTRERS -
+                                                    ideally two
+                                                    sizes of 1L & 2L bottles need to be made. As mentioned earlier, the
+                                                    bottle has to be
+                                                    in accordion style, where it could be folded flat vertically and this is
+                                                    possible by
+                                                    using Low Density Polyethylene materials. The branding on the bottle
+                                                    also needs to
+                                                    be done smartly in such a way the brand name is visible even when
+                                                    folded. 2) THE APP
+                                                    DEVELOPMENT TEAM, which plays a vital role by creating a technology
+                                                    which is
+                                                    integrated in three things - the bottom of the bottle, the App and in
+                                                    the vending
+                                                    machine which reads both the data and give the final output. This is the
+                                                    central
+                                                    team which needs to liaise with the bottle manufactures and the vending
+                                                    machine. So,
+                                                    they create a code sticker, gives it to the bottle maker to integrate.
+                                                    They also
+                                                    create circular magnetic plate which can read the data and gives it to
+                                                    the vending
+                                                    machine manufactures to fix it in the machine. And also create an App
+                                                    which could be
+                                                    downloaded. This concept is similar to the magnetic strip /chip in the
+                                                    credit card
+                                                    and how the swiping machine reads the data by just taping/ swiping on it
+                                                    3) ReFILLER
+                                                    PORT - the vending machine has to take up a regular space of a tap and
+                                                    probably look
+                                                    like EV charging port. And interaction of the customer with the machine
+                                                    like the one
+                                                    similar one which they have with an ATM machine perhaps. The machine
+                                                    maker needs to
+                                                    collaborate with the technology team to get the magnetic plate integrate
+                                                    into it and
+                                                    the tap needs to operate based on the data reading. 4) CIVIL ENGINEERING
+                                                    - when
+                                                    deciding on the spot of vending machine, it needs to be noted they would
+                                                    require
+                                                    10ft x10ft space beneath the ground for storing water. So, the ground
+                                                    needs to be
+                                                    dug out and a underground tank built to store the water. The capacity
+                                                    could be
+                                                    around 10000 liters approximately. This tank would be covered
+                                                    permanently with just
+                                                    an outlet to fill the tank. the vending machine fixed on it. The tank
+                                                    could be
+                                                    filled as and when the water level goes below the mark. And last player,
+                                                    5) FILTER
+                                                    MAKER - Before the water from the tank comes out through the tap, it
+                                                    needs to go
+                                                    through a filter which makes the water “ drink ready” . It has to be
+                                                    noted, the
+                                                    fresh water is not viable to be consumed directly, hence it needs to be
+                                                    filtered
+                                                    before it goes into the consumer's bottle. Finally, the disposal of the
+                                                    bottle - It
+                                                    is similar to the SIM/credit card. They could always replace the
+                                                    existing bottle
+                                                    with the new one for a nominal price in any of the retail store, this
+                                                    could be
+                                                    little less than buying a new bottle.</p>
+                                                <p class="pb-15">The moment the new one is activated the old
+                                                    one becomes obsolete. How the idea help the company to tackle the
+                                                    concerns a
+                                                    consumer is facing?” - g. concerns on convenience, concerns on
+                                                    sustainability, etc
+                                                    The idea solves couple of issues at both individual level and
+                                                    environmental level.
+                                                    Every time the consumer buys a bottle, it creates a burden on the
+                                                    individual as well
+                                                    as the planet. This single bottle concept negates the production of
+                                                    unnecessary
+                                                    plastic bottles. Imagine not having to produce million of plastic
+                                                    bottles. And
+                                                    another thing is the accordion fold bottle, which is a great space
+                                                    saver, easy to
+                                                    carry and of course very convenient. Why this solution is the best
+                                                    option to future
+                                                    proof their business?” This concept makes the consumer subscribe to a
+                                                    plan which is
+                                                    technically a subscription to the brand. Let us imagine, if a person
+                                                    subscribes to
+                                                    50 liters of water, this means he is guaranteed to buy 50 bottles from
+                                                    the brand in
+                                                    the future. He would in no way be instigated to go for another brand of
+                                                    natural
+                                                    water since he has already subscribed to this plan and by all means, he
+                                                    would stick
+                                                    to the brand as he has already paid for it. And the subscription could
+                                                    be made more
+                                                    attractive, like when the consumer has exhausted say 40L out of 50L,
+                                                    then an
+                                                    attractive offer could be custom made for him via app, to subscribe for
+                                                    more, for
+                                                    example, subscribe for 50L more and get 70L. This is like mobile
+                                                    subscription; the
+                                                    consumer would not so easily move away from the brand. This makes the
+                                                    consumer a
+                                                    customer for life probably. The subscription is applicable irrespective
+                                                    of the
+                                                    cities/place.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal14">
+                                        <img src="images/girl.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal14" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Breaston </p>
+                                                    <p><span>Client</span> Vedic Pharmacy India</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>To create an impactful introduction campaign that positions
+                                                        Breastone as the go-to solution for women seeking firmness,
+                                                        confidence, and
+                                                        self-care. The campaign should highlight the product's benefits
+                                                        while
+                                                        fostering empowerment and body positivity.</p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img src="images/girl.jpg" alt="girl" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img src="images/turn-girl.jpg" alt="girl" class="img-fluid">
+                                                    </div>
+                                                </div>
+    
+                                                <p class="pt-15 pb-10"><span>Idea description</span></p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="pb-15">
+                                                            The intro campaign was a teaser followed by the launch. The
+                                                            teaser
+                                                            essentially talks about the innate fear factor woman have on
+                                                            subliminal
+                                                            level, and how they the product allows them to be confident. The
+                                                            follow up
+                                                            campaign reiterates about discarding the other regular methods
+                                                            used by woman
+                                                            to show firmness.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-6 pb-15">
+                                                        <img src="images/breastone_01.jpg" alt="Breastone01"
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img src="images/breastone_02.jpg" alt="Breastone02"
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img src="images/breastone_03.jpg" alt="Breastone03"
+                                                            class="img-fluid">
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal15">
+                                        <img src="images/mug.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal15" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Signature Kitchen</p>
+                                                    <p><span>Client</span> Signature Kitchen India</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>Create an advertising campaign that highlights the perfect balance of
+                                                        convenience and style in modular kitchens</p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 pad-rgt-top">
+                                                        <img src="images/mug01.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6 pad-rgt-top">
+                                                        <img src="images/mug03.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6 pad-rgt-top">
+                                                        <img src="images/mug.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6 pad-rgt-top">
+                                                        <img src="images/mug02.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                                <p class="pt-15">The campaign talks about how a modern kitchen is no longer
+                                                    just a place
+                                                    to cook—it's the heart of the home, where conversations flow, memories
+                                                    are made, and
+                                                    moments are shared. With stylish designs, smart functionality, and
+                                                    inviting spaces,
+                                                    the kitchen has become a favorite spot for family gatherings, casual
+                                                    work sessions,
+                                                    and even relaxation. Its aesthetic appeal and seamless convenience make
+                                                    it a space
+                                                    where people love to spend more time, turning everyday routines into
+                                                    enjoyable
+                                                    experiences.</p>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal16">
+                                        <img src="images/shower.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal16" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-1530">
+                                                    <p><span>Brand</span> FIRMENCH </p>
+                                                    <p><span>Client</span> FIRMENCH SA Switzerland</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>To create an impactful introduction campaign that positions
+                                                        Breastone as the go-to solution for women seeking firmness,
+                                                        confidence, and
+                                                        self-care. The campaign should highlight the product's benefits
+                                                        while
+                                                        fostering empowerment and body positivity.</p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img src="images/shower.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="pb-10"><span>Idea description</span></p>
+                                                        <p class="pb-15">In our day to day life, we use the phrase like
+                                                            “Take a shower”
+                                                            Now, the new
+                                                            body wash experience is so overwhelming in fragrance that a
+                                                            woman no more
+                                                            “TAKE” a shower instead they WEAR a shower. During the shower,
+                                                            the fragrance
+                                                            of this new body wash engulfs the woman totally, and probably
+                                                            shower effect
+                                                            stay with them. Hence the inference “Wear a Shower”.</p>
+                                                        <p><span>What is the new experience?</span></p>
+                                                        <p class="pb-15">A woman decides to take a shower. She gets into the
+                                                            shower
+                                                            enclosure. She turns on the shower. Take out the body wash pack
+                                                            and as
+                                                            squeezes out a few drop of it an overwhelming fragrance engulfs
+                                                            the shower
+                                                            enclosure.</p>
+                                                    </div>
+                                                </div>
+                                                <p class="pt-15"> Soon, the rounded glass shower enclosure transforms into a
+                                                    rounded perfume bottle with the woman indulging herself in the fragrance
+                                                    of
+                                                    shower inside it.</p>
+                                                <p class="pb-15">As we all know, fragrance from a few drop of perfumes last
+                                                    a long time,
+                                                    so, imagine
+                                                    the experience of getting immersed in a full bottle of perfume. That
+                                                    would be the
+                                                    experience the new body wash would bring. The idea is to show how the
+                                                    shower
+                                                    enclosure becomes a Perfume bottle. Because of the overwhelming
+                                                    fragrance of the
+                                                    body wash. The entire body wash time would be like, being immersed in a
+                                                    perfume
+                                                    bottle - courtesy the fragrance of the body wash liquid.</p>
+                                                <p class="pb-15">The shower enclosure is
+                                                    shown as a perfume bottle. With the new body wash, the shower is not
+                                                    TAKEN, but WORN
+                                                    like a perfume. The Inference is that the fragrance of the shower is as
+                                                    good as
+                                                    wearing a perfume as or if not better.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal17">
+                                        <img src="images/nodropofworry.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal17" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Always Protection</p>
+                                                    <p><span>Client</span> Procter & Gamble, Switzerland </p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>Objective To create an impactful advertising campaign that highlights
+                                                        the
+                                                        importance of reliable and comfortable menstrual protection,
+                                                        reinforcing trust
+                                                        in the brand and driving consumer preference.</p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img src="images/nodropofworry.jpg" alt="shower" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="pb-15"><span>Idea description</span></p>
+                                                        <p class="pb-15">The greatest problem women face during periods is
+                                                            protection
+                                                            against leakages. The idea address those worries with a campaign
+                                                            called “The
+                                                            positive protection. No Drop of worries”. In one form, it
+                                                            addresses the
+                                                            leakage problem, in other form, it creatively infers that women
+                                                            do not have
+                                                            to drop a single tear over this issue as they have positive
+                                                            protection
+                                                            provided by the brand. In the word “drops” the letter “O” is
+                                                            designed as a
+                                                            drop with an X-mark placed inside it to indicate “NO”. The
+                                                            poster shows a
+                                                            young, confident ballet dancer in one of the difficult poses,
+                                                            with her hands
+                                                            holding her opposite legs crossing each other to create an X
+                                                            sign which is a
+                                                            symbolic connection to the sign in the headline.</p>
+    
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+    
+                                                    <div class="col-md-6 pt-15">
+    
+                                                        <p class="pb-15">The model is shown doing a ballet dance because it
+                                                            is a dance
+                                                            form that requires utmost precision, skill and flexibility. It
+                                                            essentially
+                                                            show how the model is confidently doing the most difficult and
+                                                            flexible act
+                                                            without any worries as she is confident of the product not
+                                                            letting her down
+                                                            under any circumstance. It show the trust and utmost reliability
+                                                            she has on
+                                                            the product</p>
+                                                        <p class="pb-15"> Ballet dance is a much difficult form of dance.
+                                                            The ballerina
+                                                            model too will be a huge inspiration. A lot of honesty,
+                                                            discipline, and hard
+                                                            work goes into to becoming one. She is looked up to in the
+                                                            society for the
+                                                            commitment towards the art. Apracticing ballerina is revered and
+                                                            respected
+                                                            for her skill and discipline. So, the general thought will be,
+                                                            if a ballet
+                                                            dancer who can't afford to be careless, can trust this brand so
+                                                            can I.</p>
+    
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img src="images/nodropofworry01.png" alt="shower"
+                                                            class="img-fluid">
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal19">
+                                        <img src="images/coconutea.png" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal19" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> NA</p>
+                                                    <p><span>Client</span> NA</p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>To create Create a new no-sugar, ready-to-drink tea that is intensely flavorful and delicious. - product concept that makes consumers excited about choosing a healthier option, without worrying about taste.</p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img src="images/coconutea.png" alt="coconutea" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="pb-10"><span>Idea description</span></p>
+                                                        <p><span>Introducing COCNUTEA</span> - </p>
+                                                        <p class="pb-10">A refreshing Sugarless Tea made with Tender Coconut Water. As we all know, Drinking Tender coconut water every day morning on empty stomach has numerous Health. Though many are aware of this, they cannot avoid a refreshing tea as the first drink in the morning. There is a conflict between whether to have tea or coconut as first drink in the morning! Now this drink gives them the best of both the worlds!</p>
+                                                        <p class="pb-10"><span>Ingredient:</span> The main ingredients of the tea is water, here the water is replaced with tender coconut water, and the natural sweetness of the tender coconut, substitutes the artificial sugar, and hence the sweetness level would be similar to the sweetness level in the regular tender - Not too much nor too less.</p>
+                                                    </div>
+                                                </div>
+                                                <p class="pb-15"><span>Package:</span> The drink comes in white Can. The graphic design on the can shows a fresh tender coconut resembling a tea kettle and cup, placed on a green saucer. The image effectively shows the coming together of tender coconut and tea seamlessly.</p>
+                                                <p class="pb-15"><span>Emotional benefits:</span> One guaranteed feeling while opening the can is - they are going to have something that is good for both the body and mind. </p>
+                                                <p class="pb-15"><span>Functional benefits:</span> The drink gives them the same benefit of tender coconut water - a great source of vitamins and minerals, full of antioxidants and has anti-inflammatory properties, good for gut and kidney, abundance of electrolytes which keeps the body hydrated, regulates Blood circulation. Apart from providing this many goodness to the body it also improves the mood, reduces the stress, and relaxes the mind.</p>
+                                                <p class="pb-15"><span>Ideal Time to drink:</span> Any time is a good time to drink COCONUTEA, but the ideal time is to have it first thing in the morning on empty stomach. </p>
+                                                <p><span>What is unique / differentiating about your no-sugar tea idea?</span> </p>
+                                                <p class="pb-15">This No-sugar drink is a perfect blend which satiates both the body and mind at the same time. It is ideal for health-conscious people who want the best of both the world - a drink which refreshes them and a drink which gives them immense health benefit. The marriage of tender coconut water and tea bring a fresh perceptive to a drink where both the main ingredient completement each other. </p>
+                                                <p><span>How will your no-sugar tea idea provide an extraordinary taste experience? In other words, which elements about the idea will convince people that the taste experience will not be artificial, bland or watered-down, even though it's a tea without sugar?</span> </p>
+                                                <p class="pb-15">The general perception toward all the other fruits juice is, it must be extracted, through some process, where the natural properties of the fruits get diluted and hence, the final juice in the can is not 100% original. And, also, for example, when making a juice with other fruit, like apple/mango/orange or peach - the juice is extracted and artificial sugar is added to make it “drink ready”. But, if we look at this Tender Coconut water (TCW), nobody adds sugar to it before drinking, because everyone knows it has natural sweetness in it. So, in this COCNUTEA, the tender coconut water replaces the water and sugar used to prepare the regular tea. This element of “Straight from the fruit to the kettle with less/No process” gives more authenticity to the drink.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 item-info pad-rgt-top">
+                                    <a href="#" data-toggle="modal" data-target="#imageModal18">
+                                        <img src="images/dots.jpg" alt="Portfolio 10" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="imageModal18" tabindex="-1" role="dialog"
+                                    aria-labelledby="imageModal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="pb-15">
+                                                    <p><span>Brand</span> Enfagrow</p>
+                                                    <p><span>Client</span> Mead Johnson Nutrition Singapore </p>
+                                                </div>
+                                                <div class="pb-15">
+                                                    <p><span>Objective</span></p>
+                                                    <p>To create an advertising campaign that gently nudges new
+                                                        moms to
+                                                        incorporate our baby nutrition product into their nightly routine,
+                                                        reinforcing
+                                                        its importance in their baby's growth and restful sleep</p>
+                                                </div>
+                                                <img src="images/dots.jpg" alt="dots" class="img-fluid">
+    
+                                                <p class="pt-15 pb-10"><span>Idea description</span></p>
+                                                <p>Create a sign board in front a 24 hour Pharmacy store. The board design
+                                                    would be
+                                                    black background with some scattered dots with the Enfagrow logo. The
+                                                    headline says,
+                                                    “Dots connect at night. And at the night time, the scattered dots starts
+                                                    to connect
+                                                    with each other to form the image of a brain. This gets repeated the
+                                                    whole night in
+                                                    a loop. This is essentially to reinforce the idea of how the child's
+                                                    brain is
+                                                    decoding everything at night. A new mom's who see this sign board the
+                                                    core message
+                                                    of how the brain is growing at night and the importance of nutritious
+                                                    food
+                                                    (Enfragrow). This realisation would change her behaviour positively
+                                                    toward Enfrgrow.
+                                                </p>
+                                                <p><span>How the idea would change mom's behaviour?</span></p>
+                                                <p class="pb-15">A new mom's who see this sign board the core message of how
+                                                    the brain
+                                                    is growing at
+                                                    night and the importance of nutritious
+                                                    food (Enfragrow). This realisation would change her behaviour positively
+                                                    toward
+                                                    Enfrgrow.</p>
+                                                <p><span>How the idea articulates Enfagrow consumptions within the shower,
+                                                        Feeding
+                                                        and sleeping behaviour?</span></p>
+                                                <p class="pb-15">Once the shower is done, the next step is to dry the baby
+                                                    and moms reach out to the towel to dry the baby. The brand nudge would
+                                                    come into
+                                                    this moment, after the shower and before the sleep, in the guise of a
+                                                    towel and
+                                                    becomes part of the ritual.</p>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
 
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal1">
-                        <img src="images/aciphex.jpg" alt="Portfolio 1" class="img-fluid">
-                    </a>
+                            </div>
+                       
+                    </div>
+                    </div>
                 </div>
-                <div class="modal fade" id="imageModal1" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/aciphex.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
+                <!-- Videos Tab -->
+                <div class="tab-pane fade" id="videos" role="tabpanel">
+                    <div class="row card-container">
+                        <div class="col-md-4">
+                            <video controls width="100%">
+                                <source src="images/tydal.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-md-4">
+                            <video controls width="100%">
+                                <source src="images/mm.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-md-4">
+                            <video controls width="100%">
+                                <source src="images/apc.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal2">
-                        <img src="images/volt.jpg" alt="Portfolio 2" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal2" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/volt.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
+                <!--Brand Tab-->
+                <div class="tab-pane fade" id="brand" role="tabpanel">
+                    <div class="row card-container">
+                        <div class="col-md-6">
+                            <div><a href="images/solution.pdf" target="_blank"><img src="images/dark-solution.png" alt="Solution By Text" class="img-fluid"></a></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal3">
-                        <img src="images/cipla.jpg" alt="Portfolio 3" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal3" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/cipla.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal4">
-                        <img src="images/comfort.jpg" alt="Portfolio 4" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal4" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Comfort</p>
-                                    <p><span>Client</span> Unilever , UK</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>Create a package design or still advert for Comfort's new liquid Fabric
-                                        Conditioner that communicates 'freshness' and 'naturalness' in a way that's
-                                        irresistible and distinct from existing fabric conditioners.</p>
-                                </div>
-                                <img src="images/comfort.jpg" alt="shower" class="img-fluid">
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <p class="pb-15">The idea is to blend the clothes and nature seamlessly. This is shown
-                                    by a series ofimages which could be used to different variants of the products. We
-                                    show three images of nature - Snowclad Mountain, Lush Green landscape, Sunny
-                                    Dessert. While on first look it looks like an image of nature, but on closer, it
-                                    becomes visible that the snow-clad mountain is not a mountain but a white cloth
-                                    folded in the shape of a mountain. Similarly, in the green landscape, the green
-                                    grass is actually a green towel, and the dessert sand dunes are nothing but a brown
-                                    jacket.</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>The visual shows how the clothes blend into nature just like what our product
-                                            offers. The Tagline, “Blending the freshness of nature' reiterates the
-                                            visual - blending the clothes with the nature freshness. The word blend also
-                                            has another connotation. The comfort conditioner is BLENDED (mixed) with the
-                                            washing powder to get the freshness of nature. The circle illustrated around
-                                            the copy is an signifies the blending process of mixing of the conditioner
-                                            with the clothes in the washing machine or bucket, incidentally both has
-                                            circle circumference.</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/comfort01.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal5">
-                        <img src="images/atom.jpg" alt="Portfolio 5" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal5" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> XS<sup>&trade;</sup> brand of energy and sports nutrition
-                                        products</p>
-                                    <p><span>Client</span> Amway USA</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>The future of healthier energy drink. Help XS build this sub-brand of
-                                        clean energy drinks from the ground up without taking away from the existing
-                                        line of XS Energy Drinks, including naming, messaging, positioning, and branding
-                                        elements.</p>
-                                </div>
-                                <img src="images/aotm01.jpg" alt="atom" class="img-fluid">
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <div class="row">
-                                    <div class="col-md-6">
-
-                                        <p class="pb-15">ATOM - As we all know all the matters on our planet is made up
-                                            of atoms, including the human body, The drink is produced organically, which
-                                            means it is very conscious of our environment. It takes more and gives back
-                                            more to
-                                            the environment by using sustainable farming practice. There is a common
-                                            thread
-                                            between the product and the environment, like how there is a common thread
-                                            between
-                                            the human and its environment.</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/atom.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                </div>
-                                <p class="pb-15">And the common thread is the Atom. We all are made up of atoms
-                                    on different level.
-                                    And the drink can is like atom, if opened, unleashes powerful energy to the
-                                    consumer.</p>
-                                <p><span>Atom - It is more Physical.</span></p>
-                                <p>There are two connotations for this line. The first on is
-                                    related to the ATOM part, where word signifies, the physical world, our surrounding
-                                    and environment. The drink is produced organically; hence it says that the product
-                                    has to do more with environment than with artificial flavour and ingredients etc.
-                                    And, in the second, the word physical denotes the body and how the drinks helps them
-                                    to do more physical work by giving them more energy.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal6">
-                        <img src="images/gerber.jpg" alt="Portfolio 6" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal6" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/gerber.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal7">
-                        <img src="images/wyeth.jpg" alt="Portfolio 7" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal7" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/wyeth.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal8">
-                        <img src="images/ge.jpg" alt="Portfolio 8" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal8" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/ge.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal9">
-                        <img src="images/raldesy.jpg" alt="Portfolio 9" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal9" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/raldesy.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal10">
-                        <img src="images/dysport.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal10" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/dysport.jpg" alt="Portfolio 1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal11">
-                        <img src="images/anti-virus.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal11" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> AXA</p>
-                                    <p><span>Client</span> AXA BELGIUM NV, Brussels</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>To craft a compelling advertising campaign that highlights how the
-                                        insurance company values and rewards customer loyalty in innovative and
-                                        meaningful ways, strengthening long-term relationships and trust.</p>
-                                </div>
-                                <img src="images/anti-virus.jpg" alt="Idea" class="img-fluid">
-
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <p class="pb-15">In today's world, digital security & protection is very important as
-                                    lot of classified information are stored in the personal devices like mobile laptops
-                                    desktops etc., Now, AXA, as a part of its reward program, offers its customers
-                                    digital protection by providing an anti-virus software subscription valid for one
-                                    year for one of their digital devices. The subscription gets renewed every year
-                                    depending on the term of the insurance contract. So, if the contract is for 5 years,
-                                    then the subscription is valid for five years; but would be renewed every year. And
-                                    for customer who have more than 6 contracts, the annual subscription would be for
-                                    multiple devices. This reward program essentially underlines the fact that AXA as an
-                                    insurance company ensure the protection of its customer digital part as well.</p>
-
-                                <p><span>how your fidelity reward/ feature(s) could improve clients'
-                                        satisfaction?</span></p>
-                                <p class="pb-15">Digital devices are an integral part of our life. everyone is on it
-                                    for lot many purposes like social media, banking etc. where there is a high risk of
-                                    information theft. In such a scenario, digital security is more than important now.
-                                    And most people, though are aware of the impending risk, don't usually take concrete
-                                    measure to make it secure. So, this reward defending an individual and his entire
-                                    family against virus, malware, random ware etc., would be a perfect compliment as it
-                                    gives them peace of mind in both virtual & real life.</p>
-                                <p><span>How it works? </span></p>
-                                <p class="pb-15">AXA has to reach
-                                    out to either one of the major players in antivirus software like Kaspersky, Norton,
-                                    ESET or McAfee or any other credible antivirus software company. An agreement has to
-                                    be made where AXA brings in a certain amount of customer from its domain while the
-                                    software company would provide the annual subscription at a nominal value which
-                                    would benefit both the companies, in terms of increasing the customer base as well
-                                    the revenue part.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal12">
-                        <img src="images/idea-descriptions.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal12" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Driverless cars</p>
-                                    <p><span>Client</span> IPSOS France</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>To showcase how driverless cars can transform public transportation,
-                                        making it safer, more efficient, and accessible for everyone, while building
-                                        trust in autonomous technology</p>
-                                </div>
-                                <img src="images/idea-descriptions.jpg" alt="Idea" class="img-fluid">
-
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <p class="pb-15">The idea is to create different types of groups/communities for
-                                    driverless cars.
-                                    These communities consists of an array of different groups like, Go green - for
-                                    environmental enthusiasts, Nirvana - for Yoga fans, The Godfather - for movie buffs,
-                                    Jimmy - for Jim Morrison fans etc., </p>
-                                <p class="pb-15">An individual can sign up for a particular
-                                    group(s) depending on his interests and get to meet people with similar interests.
-                                    By signing up he/she would be entitled to some privileges and access to exclusive
-                                    areas in regard with the community like free pass to some conference, concerts
-                                    movies etc., The individual can also introduce new members by which he would gain
-                                    few points which can be utilised for free drive or something. These communities can
-                                    be city specifics and while leaving the city, the points gained by an individual can
-                                    be transferred to someone else or can be utilised by joining the same community in
-                                    other cities. </p>
-                                <p class="pb-15">So, basically the intention these communities is to create
-                                    connection and bond between people who are otherwise in their own cocoon. There
-                                    should be regulatory to oversee that the communities are NOT created to wedge the
-                                    cohesiveness fabric of society.</p>
-                                <p><span>How does this service change the lifestyle of the
-                                        user and their relationship to transport and travel?</span></p>
-                                <p class="pb-15"> The journey becomes more
-                                    interesting than the destination. The travel time becomes interesting as it becomes
-                                    an arena to meet likeminded people.</p>
-                                <p><span>How is this service exclusive to the driverless
-                                        vehicle?</span></p>
-                                <p class="pb-15">The only way to meet likeminded people with similar interest while
-                                    travelling is only through signing up and using driverless vehicles.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal13">
-                        <img src="images/rehydrate.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal13" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Enfagrow</p>
-                                    <p><span>Client</span> Mead Johnson Nutrition Singapore</p>
-                                </div>
-                                <img src="images/rehydrate.jpg" alt="Portfolio 1" class="img-fluid">
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <p class="pb-15">The idea is to provide the consumer a single bottle which could be
-                                    refilled anywhere
-                                    according to their convenience based on subscription. So, the consumer buys a
-                                    bottled natural water to drink, once he consumes the waters, proceeds to scans the
-                                    code embedded sticker at the bottom of the bottle with his mobile phone, downloads
-                                    the app to registers and subscribe to a certain number of liters which needs to be
-                                    consumed within a certain timeframe. (For example: 50 liters for one month time).
-                                    And next time when he feels like drinking water, he could just go to the nearest
-                                    Refiller tap to fill his empty old bottle. The Refiller tap is installed in every
-                                    nook and corner of the city and this tap spot could be located with the help of the
-                                    downloaded App. The consumer could refill how much ever liters he/she has subscribed
-                                    for. First time, the consumer buys the bottle filled with natural water, once he
-                                    drinks the water, he can fold the bottle flat vertically and keep it in the bag. The
-                                    collapsible / accordion fold design of the bottle makes this possible. And next time
-                                    when he wants to drink the water, he opens the Refill App, locates the nearest
-                                    Refilling tap, pulls out the folded bottle from his bag, takes it close by the
-                                    machine, the machine has a sensor which detects the bottle and the slot opens
-                                    automatically. There is a hollow space with a tap on the top and a magnetic plate at
-                                    the bottom. The bottle needs to be kept in a folded format only. The code at the
-                                    bottom of the bottle sits perfectly on the magnetic plate and helps the machine to
-                                    read the code and its corresponding details of the consumer, his subscription plan
-                                    etc., and based on this, the machine automatically pulls up the bottle and fills
-                                    water based on the size of the bottle. Here it needs to be noted, the consumer
-                                    doesn't have the choice to decide on the quantity, for example, he cannot fill half.
-                                    Here the filling is automated, once the bottle goes in, the machine pulls out and
-                                    read the size and fills in accordingly. The filling hardly takes a minute to fill
-                                    and the message appears on the black door. After few seconds, the door opens, the
-                                    bottle is filled with fresh water. The consumer could do this repeatedly until the
-                                    subscription exhausts. This subscription cost would be very less when comparing
-                                    buying individual bottle every now and then. </p>
-                                <p class="pb-15">what is it, how does it work, in home,
-                                    out of home, what does the service look like, how does the water/packaging go from
-                                    the provider to the end user (and back), This idea is primarily for outdoors, for
-                                    people who are on the go. They don't have to carry the bottle of water from home,
-                                    instead fill it as and when it is required. From the business execution side, FIVE
-                                    main players would be integral part of it. 1) BOTTLE MANUFACTRERS - ideally two
-                                    sizes of 1L & 2L bottles need to be made. As mentioned earlier, the bottle has to be
-                                    in accordion style, where it could be folded flat vertically and this is possible by
-                                    using Low Density Polyethylene materials. The branding on the bottle also needs to
-                                    be done smartly in such a way the brand name is visible even when folded. 2) THE APP
-                                    DEVELOPMENT TEAM, which plays a vital role by creating a technology which is
-                                    integrated in three things - the bottom of the bottle, the App and in the vending
-                                    machine which reads both the data and give the final output. This is the central
-                                    team which needs to liaise with the bottle manufactures and the vending machine. So,
-                                    they create a code sticker, gives it to the bottle maker to integrate. They also
-                                    create circular magnetic plate which can read the data and gives it to the vending
-                                    machine manufactures to fix it in the machine. And also create an App which could be
-                                    downloaded. This concept is similar to the magnetic strip /chip in the credit card
-                                    and how the swiping machine reads the data by just taping/ swiping on it 3) ReFILLER
-                                    PORT - the vending machine has to take up a regular space of a tap and probably look
-                                    like EV charging port. And interaction of the customer with the machine like the one
-                                    similar one which they have with an ATM machine perhaps. The machine maker needs to
-                                    collaborate with the technology team to get the magnetic plate integrate into it and
-                                    the tap needs to operate based on the data reading. 4) CIVIL ENGINEERING - when
-                                    deciding on the spot of vending machine, it needs to be noted they would require
-                                    10ft x10ft space beneath the ground for storing water. So, the ground needs to be
-                                    dug out and a underground tank built to store the water. The capacity could be
-                                    around 10000 liters approximately. This tank would be covered permanently with just
-                                    an outlet to fill the tank. the vending machine fixed on it. The tank could be
-                                    filled as and when the water level goes below the mark. And last player, 5) FILTER
-                                    MAKER - Before the water from the tank comes out through the tap, it needs to go
-                                    through a filter which makes the water “ drink ready” . It has to be noted, the
-                                    fresh water is not viable to be consumed directly, hence it needs to be filtered
-                                    before it goes into the consumer's bottle. Finally, the disposal of the bottle - It
-                                    is similar to the SIM/credit card. They could always replace the existing bottle
-                                    with the new one for a nominal price in any of the retail store, this could be
-                                    little less than buying a new bottle.</p>
-                                <p class="pb-15">The moment the new one is activated the old
-                                    one becomes obsolete. How the idea help the company to tackle the concerns a
-                                    consumer is facing?” - g. concerns on convenience, concerns on sustainability, etc
-                                    The idea solves couple of issues at both individual level and environmental level.
-                                    Every time the consumer buys a bottle, it creates a burden on the individual as well
-                                    as the planet. This single bottle concept negates the production of unnecessary
-                                    plastic bottles. Imagine not having to produce million of plastic bottles. And
-                                    another thing is the accordion fold bottle, which is a great space saver, easy to
-                                    carry and of course very convenient. Why this solution is the best option to future
-                                    proof their business?” This concept makes the consumer subscribe to a plan which is
-                                    technically a subscription to the brand. Let us imagine, if a person subscribes to
-                                    50 liters of water, this means he is guaranteed to buy 50 bottles from the brand in
-                                    the future. He would in no way be instigated to go for another brand of natural
-                                    water since he has already subscribed to this plan and by all means, he would stick
-                                    to the brand as he has already paid for it. And the subscription could be made more
-                                    attractive, like when the consumer has exhausted say 40L out of 50L, then an
-                                    attractive offer could be custom made for him via app, to subscribe for more, for
-                                    example, subscribe for 50L more and get 70L. This is like mobile subscription; the
-                                    consumer would not so easily move away from the brand. This makes the consumer a
-                                    customer for life probably. The subscription is applicable irrespective of the
-                                    cities/place.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal14">
-                        <img src="images/girl.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal14" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Breaston </p>
-                                    <p><span>Client</span> Vedic Pharmacy India</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>To create an impactful introduction campaign that positions
-                                        Breastone as the go-to solution for women seeking firmness, confidence, and
-                                        self-care. The campaign should highlight the product's benefits while
-                                        fostering empowerment and body positivity.</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="images/girl.jpg" alt="girl" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/turn-girl.jpg" alt="girl" class="img-fluid">
-                                    </div>
-                                </div>
-
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p class="pb-15">
-                                            The intro campaign was a teaser followed by the launch. The teaser
-                                            essentially talks about the innate fear factor woman have on subliminal
-                                            level, and how they the product allows them to be confident. The follow up
-                                            campaign reiterates about discarding the other regular methods used by woman
-                                            to show firmness.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/breastone_01.jpg" alt="Breastone01" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/breastone_02.jpg" alt="Breastone02" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/breastone_03.jpg" alt="Breastone03" class="img-fluid">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal15">
-                        <img src="images/mug.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal15" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Signature Kitchen</p>
-                                    <p><span>Client</span> Signature Kitchen India</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>Create an advertising campaign that highlights the perfect balance of
-                                        convenience and style in modular kitchens</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 pad-rgt-top">
-                                        <img src="images/mug01.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6 pad-rgt-top">
-                                        <img src="images/mug03.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6 pad-rgt-top">
-                                        <img src="images/mug.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6 pad-rgt-top">
-                                        <img src="images/mug02.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                </div>
-                                <p class="pt-15">The campaign talks about how a modern kitchen is no longer just a place
-                                    to cook—it's the heart of the home, where conversations flow, memories are made, and
-                                    moments are shared. With stylish designs, smart functionality, and inviting spaces,
-                                    the kitchen has become a favorite spot for family gatherings, casual work sessions,
-                                    and even relaxation. Its aesthetic appeal and seamless convenience make it a space
-                                    where people love to spend more time, turning everyday routines into enjoyable
-                                    experiences.</p>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal16">
-                        <img src="images/shower.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal16" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> FIRMENCH </p>
-                                    <p><span>Client</span> FIRMENCH SA Switzerland</p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>To create an impactful introduction campaign that positions
-                                        Breastone as the go-to solution for women seeking firmness, confidence, and
-                                        self-care. The campaign should highlight the product's benefits while
-                                        fostering empowerment and body positivity.</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="images/shower.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="pb-10"><span>Idea description</span></p>
-                                        <p class="pb-15">In our day to day life, we use the phrase like “Take a shower”
-                                            Now, the new
-                                            body wash experience is so overwhelming in fragrance that a woman no more
-                                            “TAKE” a shower instead they WEAR a shower. During the shower, the fragrance
-                                            of this new body wash engulfs the woman totally, and probably shower effect
-                                            stay with them. Hence the inference “Wear a Shower”.</p>
-                                            <p class="pt-15"><span>What is the new experience?</span></p>
-                                <p class="pb-15">A woman decides to take a shower. She gets into the shower
-                                    enclosure. She turns on the shower. Take out the body wash pack and as
-                                    squeezes out a few drop of it an overwhelming fragrance engulfs the shower
-                                    enclosure.</p>
-                                    
-                                    </div>
-                                </div>
-                                <p> Soon, the rounded glass shower enclosure transforms into a
-                                    rounded perfume bottle with the woman indulging herself in the fragrance of
-                                    shower inside it.</p>
-                                <p class="pb-15">As we all know, fragrance from a few drop of perfumes last a long time,
-                                    so, imagine
-                                    the experience of getting immersed in a full bottle of perfume. That would be the
-                                    experience the new body wash would bring. The idea is to show how the shower
-                                    enclosure becomes a Perfume bottle. Because of the overwhelming fragrance of the
-                                    body wash. The entire body wash time would be like, being immersed in a perfume
-                                    bottle - courtesy the fragrance of the body wash liquid.</p>
-                                <p class="pb-15">The shower enclosure is
-                                    shown as a perfume bottle. With the new body wash, the shower is not TAKEN, but WORN
-                                    like a perfume. The Inference is that the fragrance of the shower is as good as
-                                    wearing a perfume as or if not better.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal17">
-                        <img src="images/nodropofworry.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal17" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Always Protection</p>
-                                    <p><span>Client</span> Procter & Gamble, Switzerland </p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>To create an impactful advertising campaign that highlights the
-                                        importance of reliable and comfortable menstrual protection, reinforcing trust
-                                        in the brand and driving consumer preference.</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="images/nodropofworry.jpg" alt="shower" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="pb-10"><span>Idea description</span></p>
-                                        <p class="pb-15">The greatest problem women face during periods is protection
-                                            against leakages. The idea address those worries with a campaign called “The
-                                            positive protection. No Drop of worries”. In one form, it addresses the
-                                            leakage problem, in other form, it creatively infers that women do not have
-                                            to drop a single tear over this issue as they have positive protection
-                                            provided by the brand. In the word “drops” the letter “O” is designed as a
-                                            drop with an X-mark placed inside it to indicate “NO”. The poster shows a
-                                            young, confident ballet dancer in one of the difficult poses, with her hands
-                                            holding her opposite legs crossing each other to create an X sign which is a
-                                            symbolic connection to the sign in the headline.</p>
-
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                    <div class="col-md-6">
-
-                                        <p class="pb-15">The model is shown doing a ballet dance because it is a dance
-                                            form that requires utmost precision, skill and flexibility. It essentially
-                                            show how the model is confidently doing the most difficult and flexible act
-                                            without any worries as she is confident of the product not letting her down
-                                            under any circumstance. It show the trust and utmost reliability she has on
-                                            the product</p>
-                                        <p class="pb-15"> Ballet dance is a much difficult form of dance. The ballerina
-                                            model too will be a huge inspiration. A lot of honesty, discipline, and hard
-                                            work goes into to becoming one. She is looked up to in the society for the
-                                            commitment towards the art. Apracticing ballerina is revered and respected
-                                            for her skill and discipline. So, the general thought will be, if a ballet
-                                            dancer who can't afford to be careless, can trust this brand so can I.</p>
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/nodropofworry01.png" alt="shower" class="img-fluid">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 item-info pad-rgt-top">
-                    <a href="#" data-toggle="modal" data-target="#imageModal18">
-                        <img src="images/dots.jpg" alt="Portfolio 10" class="img-fluid">
-                    </a>
-                </div>
-                <div class="modal fade" id="imageModal18" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="pb-15">
-                                    <p><span>Brand</span> Enfagrow</p>
-                                    <p><span>Client</span> Mead Johnson Nutrition Singapore </p>
-                                </div>
-                                <div class="pb-15">
-                                    <p><span>Objective</span></p>
-                                    <p>To create an advertising campaign that gently nudges new moms to
-                                        incorporate our baby nutrition product into their nightly routine, reinforcing
-                                        its importance in their baby's growth and restful sleep</p>
-                                </div>
-                                <img src="images/dots.jpg" alt="dots" class="img-fluid">
-
-                                <p class="pt-15 pb-10"><span>Idea description</span></p>
-                                <p>Create a sign board in front a 24 hour Pharmacy store. The board design would be
-                                    black background with some scattered dots with the Enfagrow logo. The headline says,
-                                    “Dots connect at night. And at the night time, the scattered dots starts to connect
-                                    with each other to form the image of a brain. This gets repeated the whole night in
-                                    a loop. This is essentially to reinforce the idea of how the child's brain is
-                                    decoding everything at night. A new mom's who see this sign board the core message
-                                    of how the brain is growing at night and the importance of nutritious food
-                                    (Enfragrow). This realisation would change her behaviour positively toward Enfrgrow.
-                                </p>
-                                <p><span>How the idea would change mom's behaviour?</span></p>
-                                <p class="pb-15">A new mom's who see this sign board the core message of how the brain
-                                    is growing at
-                                    night and the importance of nutritious
-                                    food (Enfragrow). This realisation would change her behaviour positively toward
-                                    Enfrgrow.</p>
-                                <p><span>How the idea articulates Enfagrow consumptions within the shower, Feeding
-                                        and sleeping behaviour?</span></p>
-                                <p class="pb-15">Once the shower is done, the next step is to dry the baby
-                                    and moms reach out to the towel to dry the baby. The brand nudge would come into
-                                    this moment, after the shower and before the sleep, in the guise of a towel and
-                                    becomes part of the ritual.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="pagination" id="pagination">
-                        <!-- <a href="#" id="prev">Previous</a>  -->
-                        <a href="#" class="page-link" data-page="1">1</a>
-                        <a href="#" class="page-link" data-page="2">2</a>
-                        <a href="#" class="page-link" data-page="3">3</a>
-                        <a href="#" class="page-link" data-page="4">4</a>
-                        <!-- <a href="#" id="next">Next</a>  -->
-                    </div>
-                </div>
-            
             </div>
-
-
+    
+            <!-- Pagination -->
+            <div class="col-md-12">
+                <div class="pagination" id="pagination">
+                    <a href="#" class="page-link" data-page="1">1</a>
+                    <a href="#" class="page-link" data-page="2">2</a>
+                    <a href="#" class="page-link" data-page="3">3</a>
+                    <a href="#" class="page-link" data-page="4">4</a>
+                </div>
+            </div>
+    
+            <!-- View My Work Button -->
+            <div class="">
+                <div class="wht-sec-btn" ><a href="portfolio.html" target="_blank" id="view-btn">View My Work</a></div>
+            </div>
+    
         </div>
     </section>
     <!-- End Portfolio section-->
@@ -914,10 +1238,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-left">
-                        <p>BANGALORE</p>
+                        <p>BANGALORE, INDIA</p>
                     </div>
                     <div class="footer-right">
-                        <p><a href="mailto:nameravi@gmail.com">NAMERAVI@GMAIL.COM</a></p>
+                        <p><a href="mailto:ravi.artbox@gmail.com">ravi.artbox@gmail.com</a></p>
                     </div>
                 </div>
             </div>
@@ -929,7 +1253,9 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script> 
     <script src="js/main.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 
 </body>
 
