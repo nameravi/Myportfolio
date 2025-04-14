@@ -304,7 +304,7 @@ a[href^="tel:"] {
 
 /* About Section */
 .about-section{
-    padding: 25px 0px 80px 0px;
+    padding: 55px 0px 80px 0px;
 }
 .about-section .award-info{
     display: flex;
@@ -322,6 +322,9 @@ a[href^="tel:"] {
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
+}
+.about-img{
+    padding-top: 10px;
 }
 .pb-30{
     padding-bottom: 30px;
@@ -417,11 +420,17 @@ a[href^="tel:"] {
     background-color: transparent!important;
     border: none;
 }
+.bg-white .page-link{
+    color: #616161;
+}
 .page-link:focus{
     box-shadow: none;
 }
 .page-link:hover{
     color: #fff!important;
+}
+.bg-white .page-link:hover{
+    color: #616161!important;
 }
 .page-link:nth-child(3){
     margin-right: 0px;
@@ -434,6 +443,11 @@ a[href^="tel:"] {
 .page-link.active {
     background-color: #fff!important; /* Blue background */
     color: #616161; /* White text color */
+    border: none;
+}
+.bg-white .page-link.active {
+    background-color: #616161!important; /* Blue background */
+    color: #fff; /* White text color */
     border: none;
 }
 .modal-header{
@@ -458,56 +472,51 @@ line-height: 28px;
 .portfolio-section .modal-body p span{
     font-weight: 500;
 }
+.portfolio-section.extra-padding {
+    padding-bottom: 100px;
+  }
 .nav-pills .nav-link, .nav-pills .nav-link:hover, .nav-pills .nav-link:active{
 font-size: 18px;
 line-height: 30px;
 color: #fff;
 padding: 10px 20px;
 }
+.bg-white .nav-pills .nav-link, .bg-white .nav-pills .nav-link:hover, .bg-white .nav-pills .nav-link:active{
+    color: #616161;
+    }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background: transparent;
     color: #fff;
     border: solid 1px #fff;
     border-radius: 0px;
 }
-
-/* Owl Carousel */
-.owl-theme .owl-dots .owl-dot span{
-    width: 30px;
-    height: 30px;
-    color: #fff;
-    background: transparent;
-}
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
-    background: #fff;
+.bg-white .nav-pills .nav-link.active, .bg-white .nav-pills .show>.nav-link{
     color: #616161;
+    border: solid 1px #616161;
 }
-.owl-carousel .owl-dots {
-    position: absolute;
-    bottom: 0px; /* Place the dots near the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 15;
+/* Swiper Slide */
+.slide-one{
+    background: url('../images/banner.png'); 
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
-
-.owl-carousel .owl-dots .owl-dot {
-    background-color: #fff; /* Dot color */
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
-    opacity: 1;
-    border:solid 1px #616161;
+.slide-two{
+    background: url('../images/banner02.jpg'); 
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
-
-.owl-carousel .owl-dots .owl-dot.active {
-    background-color: #616161; /* Active dot color */
-    opacity: 1;
-    border:solid 1px #bcbcbc;
+.slide-three{
+    background: url('../images/banner03.jpg'); 
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 .mobile-banner{
-    display: none!important;
-}
+    display: none;
+    
+}  
 /* Award Section */
 .award-section{
     padding: 60px 0px 30px 0px;
@@ -582,4 +591,13 @@ padding: 10px 20px;
     line-height: 30px;
     color: #616161;
     font-weight: 300;
+}
+.hero-content {
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.hero-content.animate {
+    opacity: 0;
+    transform: translateY(0);
 }
