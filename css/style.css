@@ -149,8 +149,12 @@ a[href^="tel:"] {
 .navbar{
     padding: 0px;
 }
-.navbar img{
+.navbar .logo-img-1{
     display: none;
+}
+.navbar .logo-img-2{
+    display: block;
+    width: 40px;
 }
 .main-menu{
     position: relative;
@@ -247,6 +251,10 @@ a[href^="tel:"] {
     opacity: 0.8;
 }
 
+.navbar-nav .nav-item:nth-child(1) .nav-link {
+    padding:0px;
+}
+
 .wht-sec-btn {
     position: relative;
 }
@@ -330,7 +338,7 @@ a[href^="tel:"] {
     padding-bottom: 30px;
 }
 .pb-15{
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
 }
 .pt-15{
     padding-top: 15px;
@@ -600,4 +608,40 @@ padding: 10px 20px;
 .hero-content.animate {
     opacity: 0;
     transform: translateY(0);
+}
+/* award Section */
+.award-info h2{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.award-info p{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-bottom: 6px;
+}
+.award-info p span{
+    font-weight: 600;
+}
+.award-info{
+    flex: 1;
+    padding:10px;
+}
+.award-img{
+    flex: 1;
+}
+.award-group{
+    background: #F4F4F4;
+    border: solid 1px #e8e8e8;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.award-group:hover{
+    filter: grayscale(0);
+}
+.award-sec{
+    padding-bottom: 40px;
 }

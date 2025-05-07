@@ -80,9 +80,13 @@
 .owl-item .item{
     background-image: none!important;
 }
-.navbar img{
+.navbar .logo-img-1{
     display: block;
 }
+.navbar .logo-img-2{
+    display: none;
+}
+
     }
     @media only screen and (max-width: 991.98px) {
         .mobile-banner{

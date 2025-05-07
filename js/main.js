@@ -1,18 +1,21 @@
-// Highlight current nav link
 document.addEventListener("DOMContentLoaded", function () {
-    const currentUrl = window.location.pathname;
+    // --- ✅ Set Active Class Based on URL ---
+    const currentPage = window.location.pathname.split("/").pop(); // e.g., "about.html"
     const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(link => link.classList.remove('active'));
-
     navLinks.forEach(link => {
-        if ((link.pathname === currentUrl && !link.hash) ||
-            (currentUrl === '/' && link.pathname === '/index.html')) {
+        const linkPage = link.getAttribute('href')?.split("/").pop();
+
+        if (link.querySelector('img')) return;
+
+        if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
             link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 
-    // Ensure first portfolio tab is active by default
+    // --- ✅ Portfolio Tabs Setup ---
     const firstTab = document.querySelector('#portfolio-tabs .nav-link');
     const firstTabContent = document.querySelector('.tab-content .tab-pane');
 
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         firstTabContent.classList.add('active', 'show');
     }
 
-    // Portfolio logic
+    // --- ✅ Portfolio Pagination Logic ---
     const cardsPerPage = 5;
     const dataContainer = document.getElementById('data-container');
     const pagination = document.getElementById('pagination');
@@ -36,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const allCards = Array.from(dataContainer.getElementsByClassName('item-info'));
     let currentCards = [];
-    let currentPage = 1;
+    let currentPageNum = 1;
 
     function filterCards(tab) {
         if (tab === 'all') {
@@ -47,6 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return allCards.filter(card => card.classList.contains('brand'));
         }
         return [];
+    }
+
+    function displayAllCards(cardList) {
+        allCards.forEach(card => card.style.display = 'none');
+        cardList.forEach(card => card.style.display = 'block');
+        pagination.style.display = 'none';
     }
 
     function displayPage(page, cardList) {
@@ -66,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function updatePagination() {
         pageLinks.forEach(link => {
             const page = parseInt(link.getAttribute('data-page'));
-            link.classList.toggle('active', page === currentPage);
+            link.classList.toggle('active', page === currentPageNum);
         });
     }
 
@@ -74,49 +83,50 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination.style.display = cardList.length > cardsPerPage ? 'flex' : 'none';
     }
 
+    function handleTabClick(tabType) {
+        currentPageNum = 1;
+        currentCards = filterCards(tabType);
+
+        if (!viewBtn) {
+            displayAllCards(currentCards);
+        } else {
+            displayPage(currentPageNum, currentCards);
+            updatePagination();
+
+            viewBtn.style.top = '0';
+            viewBtn.style.right = '0';
+            portSec.style.paddingBottom = '200px';
+
+            if (tabType === 'all') {
+                viewBtn.style.top = '-50px';
+                viewBtn.style.right = '-10px';
+                portSec.style.paddingBottom = '65px';
+            }
+        }
+    }
+
     allTab?.addEventListener('click', (e) => {
         e.preventDefault();
-        currentPage = 1;
-        currentCards = filterCards('all');
-        displayPage(currentPage, currentCards);
-        updatePagination();
-
-        viewBtn.style.top = '-50px';
-        viewBtn.style.right = '-10px';
-        portSec.style.paddingBottom = '65px';
+        handleTabClick('all');
     });
 
     videosTab?.addEventListener('click', (e) => {
         e.preventDefault();
-        currentPage = 1;
-        currentCards = filterCards('videos');
-        displayPage(currentPage, currentCards);
-        updatePagination();
-
-        viewBtn.style.top = '0';
-        viewBtn.style.right = '0';
-        portSec.style.paddingBottom = '200px';
+        handleTabClick('videos');
     });
 
     brandTab?.addEventListener('click', (e) => {
         e.preventDefault();
-        currentPage = 1;
-        currentCards = filterCards('brand');
-        displayPage(currentPage, currentCards);
-        updatePagination();
-
-        viewBtn.style.top = '0';
-        viewBtn.style.right = '0';
-        portSec.style.paddingBottom = '200px';
+        handleTabClick('brand');
     });
 
     pageLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const page = parseInt(link.getAttribute('data-page'));
-            if (page !== currentPage) {
-                currentPage = page;
-                displayPage(currentPage, currentCards);
+            if (page !== currentPageNum) {
+                currentPageNum = page;
+                displayPage(currentPageNum, currentCards);
                 updatePagination();
             }
         });
@@ -124,19 +134,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initial load
     currentCards = filterCards('all');
-    displayPage(currentPage, currentCards);
-    updatePagination();
+    if (!viewBtn) {
+        displayAllCards(currentCards);
+    } else {
+        displayPage(currentPageNum, currentCards);
+        updatePagination();
+    }
 });
 
-
+// --- ✅ AOS & Swiper Initialization ---
 document.addEventListener("DOMContentLoaded", function () {
-
     AOS.init({
-        once: false, // Make sure animations run more than once
+        once: false,
         duration: 800,
         disable: function () {
             return window.innerWidth < 768;
-          }
+        }
     });
 
     const swiper = new Swiper('.swiper', {
@@ -145,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 5000,
             disableOnInteraction: false,
         },
-        
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -154,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
             slideChangeTransitionStart: function () {
                 const activeSlide = swiper.slides[swiper.activeIndex];
                 const heroContent = activeSlide.querySelector('.hero-content');
-
                 if (heroContent) {
                     heroContent.classList.add('animate');
                 }
@@ -171,3 +182,4 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
